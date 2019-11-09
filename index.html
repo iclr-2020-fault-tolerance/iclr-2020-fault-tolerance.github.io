@@ -1,0 +1,381 @@
+
+<!--
+  Copyright 2018 The Distill Template Authors
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<!doctype html>
+
+<head>
+  <script src="template.v2.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" >
+  <meta charset="utf8">
+  <title>The Probabilistic Fault Tolerance of Neural Networks in the Continuous Limit</title>
+  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<!-- Style from https://interactive-learning.github.io/ -->
+
+<body>
+<style>
+.full-width-div {
+    position: absolute;
+    width: 100%;
+    left: 0;
+}
+.fill { 
+    min-height: 100% !important;
+    height: 100%;
+}
+
+.cover {
+  background-color: gray;
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 50vh;
+  overflow: hidden;
+}
+
+.cover video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  filter: brightness(85%);
+  z-index: -1;
+}
+
+.cover h3 {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 40%;
+  margin: 0;
+  line-height: 1.2em;
+  font-family: 'Roboto', sans-serif;
+  -ms-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.cover .hint {
+  position: absolute;
+  bottom: 2.5em;
+  /* right: 3em; */
+  left: 50%;
+  font-size: 1.0em;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.cover div:after {
+  content: '';
+  position: absolute;
+  left: 2.1em;
+  top: 1.2em;
+  border: 1px solid #fff;
+  border-style: none solid solid none;
+  width: 1em;
+  height: 1em;
+  -ms-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* Featurettes
+------------------------- */
+
+.featurette
+{
+  min-height: 300px;
+}
+
+.featurette-divider {
+  margin: 10px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+@media (min-width: 992px) {
+.vertical-align {
+  display: flex;
+  flex-direction: row;
+}
+
+.vertical-align > [class^="col-"],
+.vertical-align > [class*=" col-"] {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Optional, to align inner items 
+                              horizontally inside the column */
+}
+}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+.featurette-heading {
+    font-size: 40px;
+  }
+
+@media (min-width: 768px) {
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .featurette-heading {
+    vertical-align: middle;
+  }
+}
+
+
+
+</style>
+
+<div class="cover">
+  <h3>The Probabilistic<br /> Fault Tolerance of<br /> Neural
+  Networks in the<br /> Continuous Limit<br />
+  
+  <font size="5">a short introduction to the paper</font></h3>
+    <div class="hint unselectable">scroll down</div>
+
+</div>
+    
+
+<d-front-matter>
+  <script id='distill-front-matter' type="text/json">{
+    
+    "authors": [
+      {
+        "author":"Anonymous authors"
+      }
+    ],
+    "katex": {
+      "delimiters": [
+        {"left": "$$", "right": "$$", "display": false}
+      ]
+    }
+  }</script>
+</d-front-matter>
+
+
+<d-byline></d-byline>
+<d-article>
+    <div class="l-page-outset">
+        <h4>This page introduces our paper in a graphical manner.
+    The main goal is to explain the positioning and the content of the paper in an efficient way.</h4>
+
+    
+    
+    <div class="marketing">
+      <div class="row vertical-align featurette">
+        <div class="col-sm-7 featurette-text">
+          <span><h2 class="featurette-heading">Fault tolerance</h2>
+          <p class="lead">
+              Fault Tolerance is a property of systems to maintain
+              their functionlity even when its components crash.
+              For neural networks, this means that the output is preserved even when some neurons crash <d-cite key="torres2017fault"></d-cite>.
+          </p>
+          </span>
+        </div>
+        <div class="col-sm-5">
+          <img class="featurette-image img-responsive center-block"
+          src="dropout.png">
+          <d-footnote>Picture is taken from https://towardsdatascience.com/coding-neural-network-dropout-3095632d25ce</d-footnote>
+        </div>
+      </div>
+      <hr />
+      <div class="row vertical-align featurette">
+                <div class="col-sm-5">
+          <img class="featurette-image img-responsive center-block"
+          src="brain.jpg">
+          <d-footnote>Picture is taken from https://medium.com/the-spike/yes-the-brain-is-a-computer-11f630cad736</d-footnote>
+          
+        </div>
+        <div class="col-sm-7 featurette-text">
+          <span><h2 class="featurette-heading">Fault tolerance in biological brains</h2>
+          <p class="lead">
+              Biological systems are known to be fault-tolerant <d-cite key="navlakha2015distributed"></d-cite>.
+              Neurons are unreliable, and, therefore, any single neuron cannot be crucial to the computation.
+          </p>
+          </span>
+        </div>
+      </div>
+      
+      <hr />
+      
+      <div class="row vertical-align featurette">
+        <div class="col-sm-7 featurette-text">
+          <span><h2 class="featurette-heading">Fault tolerance in neuromorphic hardware</h2>
+          <p class="lead">
+              Neuromorphic hardware is an emergent computing paradigm <d-cite key="neuromorphicIBM"></d-cite>.
+              It promises to speed up neural network computations drastically.
+              However, the hardware is faulty, and thus neurons crash randomly.
+          </p>
+          </span>
+        </div>
+        <div class="col-sm-5">
+          <img class="featurette-image img-responsive center-block"
+          src="neuromorphic.png">
+          
+          <d-footnote>Picture is taken from https://www.researchgate.net/figure/Comparison-between-Brains-Computing-System-with-Conventional-Von-Neumann-Computing_fig1_316727654</d-footnote>
+          
+        </div>
+      </div>
+      
+      <hr />
+
+      <div class="row vertical-align featurette">
+                <div class="col-sm-5">
+          <img class="featurette-image img-responsive center-block"
+          src="timeline.png">
+          <d-footnote>Picture is taken from http://virgipla.wixsite.com/travellers/single-post/2017/03/07/111-Timeline-of-the-ancient-Greece</d-footnote>
+        </div>
+        <div class="col-sm-7 featurette-text">
+          <span><h2 class="featurette-heading">Research on fault tolerance</h2>
+          <p class="lead">
+              The problem of fault tolerance in neural networks consists of defending the performance of the network
+              against random crashes of individual neurons.
+              The problem was well-studied in the 90s
+              for small networks <d-cite key="torres2017fault"></d-cite>. 
+              However, advances in neuromorphic hardware ask for research in that direction for deep networks.
+          </p>
+          </span>
+        </div>
+
+        
+      </div>   
+      
+      <hr />
+       
+      <div class="row vertical-align featurette">
+        <div class="col-sm-6 col-lg-6 col-md-6 featurette-text">
+          <span><h2 class="featurette-heading">Definitions</h2>
+          <p class="lead">
+              We quantify fault tolerance of a neural network as the error in the output: $$\Delta=\hat{y}-y$$ where $$\hat{y}$$ is the output of the network with crashed neurons, and $$y$$ is the original (correct) output.
+              Our goal is to guarantee that the error $$\Delta$$ does not exceed $$\varepsilon$$ with a high probability $$1-\delta$$.
+          </p>
+          </span>
+        </div>
+        <div class="col-sm-6 col-lg-6 col-md-6">
+          <img class="img-responsive center-block"
+          src="tail_bound.png">
+        </div>
+      </div>
+      
+      <hr />
+      
+      <div class="row vertical-align featurette">
+                <div class="col-sm-5">
+          <img class="featurette-image img-responsive center-block"
+          src="regul.png">
+          <d-footnote>Picture is taken from https://en.wikipedia.org/wiki/Regularization_(mathematics)</d-footnote>
+        </div>
+        <div class="col-sm-7 featurette-text">
+          <span><h2 class="featurette-heading">Fault Tolerance and Dropout</h2>
+          <p class="lead">
+              Our problem is mathematically similar to the theoretical study of Dropout <d-cite key="hintonDropout"></d-cite>.
+              In fact, Dropout was invented in the context of Fault Tolerance research <d-cite key="kerlirzin"></d-cite>.
+              However, we are interested in the <b>average error in the output</b> $$\mathbb{E}\Delta$$.
+              In contrast, Dropout is a <b>regularization technique,</b> 
+              and, thus, theoretical studies of it are concerned about generalization properties.
+              Thus, these research directions are <b>related, but fundamentally different</b>.
+          </p>
+          </span>
+        </div>
+      </div>
+      
+      <hr />
+      
+      <div class="row vertical-align featurette">
+        <div class="col-sm-6 col-md-6 featurette-text">
+          <span><h2 class="featurette-heading">Fault Tolerance and Adversarial Examples</h2>
+          <p class="lead">
+              Our problem is also related to the phenomenon of Adversarial Examples <d-cite key="goodfellow2015explaining"></d-cite>.
+              Indeed, if we consider faults in the input, then fault tolerance is concerned about
+              the classification outcome under the <b>average perturbation</b>
+              $$\mathbb E_{\delta x}y(x+\delta x)$$.
+              
+              In contrast, Adversarial Examples are the <b>worst-case</b> perturbations
+              $$
+              \max_{\delta x}Loss(y(x+\delta x))
+              $$.
+              
+              Thus, the problem we consider is related to adversarial examples, but, again, <b>quite different</b> from it.
+          </p>
+          </span>
+        </div>
+        <div class="col-sm-6 col-md-6">
+          <img class="featurette-image img-responsive center-block"
+          src="ae.png">
+          <d-footnote>Picture is taken from https://medium.com/@ml.at.berkeley/tricking-neural-networks-create-your-own-adversarial-examples-a61eb7620fd8</d-footnote>
+        </div>
+      </div>
+      
+      <hr />
+      
+      <div class="row vertical-align featurette">
+                <div class="col-sm-6 col-lg-6">
+          <img class="featurette-image img-responsive center-block"
+          src="continuous_net.png">
+        </div>
+        <div class="col-sm-6 col-lg-6 featurette-text">
+          <span><h2 class="featurette-heading">Main contribution</h2>
+          <p class="lead">
+              We derive a bound on $$\mathbb{E}\Delta$$ and <nobr>Var$$\Delta$$</nobr> in the case if number of neurons $$n\to\infty$$,
+              and if the network follows the Continuous Limit <d-cite key="le2007continuous,sonoda2017double"></d-cite>: nearby neurons compute similar functions<d-footnote>The figure shows activations of neurons at one layer as the width increases</d-footnote>.
+              
+              The bound uses a Taylor expansion. The main technical difficulty is to bound the remainder, which we successfully do using our assumptions.
+              
+              The bound is then analyzed qualitatively, and quantitatively in our experiments.
+          </p>
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    <center>
+    <h1><a href="https://openreview.net/forum?id=rkl_f6EFPS">
+    &rarr;See the full paper on OpenReview</a></h1>
+    </center>
+</div>
+</d-article>
+
+<d-appendix>
+  <d-bibliography src="bibliography.bib"></d-bibliography>
+</d-appendix>
+</body>
